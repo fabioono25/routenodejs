@@ -1,0 +1,45 @@
+{
+	"name": "gateway-api-router",
+	"version": "1.0.0",
+	"description": "",
+	"main": "./src/server.js",
+	"scripts": {
+		"test": "node_modules/.bin/mocha test/**/**/*.spec.js",
+		"testi": "./node_modules/.bin/mocha -- -R spec test/integrated/*.integrated.spec.js",
+		"pretest": "npm run lint",
+		"cover": "node node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R spec test/unit/**/*.spec.js",
+		"lint": "./node_modules/.bin/eslint .",
+		"test-debug": "./node_modules/.bin/mocha debug -- -R spec **/*.spec.js",
+		"start": "node ./src/server.js"
+	},
+	"author": "Equipe Dev Core",
+	"license": "ISC",
+	"dependencies": {
+		"bluebird": "^3.5.1",
+		"body-parser": "^1.17.2",
+		"cors": "^2.8.4",
+		"error-factory": "^0.1.6",
+		"express": "^4.15.3",
+		"moment": "^2.19.1",
+		"newrelic": "^2.2.1",
+		"request": "^2.81.0",
+		"request-promise": "^4.2.1",
+		"xml-mapping": "^1.7.1"
+	},
+	"devDependencies": {
+		"chai": "^4.1.2",
+		"chai-as-promised": "^7.1.1",
+		"eslint": "^4.3.0",
+		"eslint-config-standard": "^10.2.1",
+		"eslint-plugin-import": "^2.7.0",
+		"eslint-plugin-node": "^5.1.1",
+		"eslint-plugin-promise": "^3.5.0",
+		"eslint-plugin-standard": "^3.0.1",
+		"istanbul": "^0.4.5",
+		"libxmljs": "^0.18.7",
+		"mocha": "^3.5.3",
+		"sinon": "^2.3.2",
+		"sinon-bluebird": "^3.1.0",
+		"sinon-chai": "^2.10.0"
+	}
+}
